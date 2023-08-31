@@ -6,15 +6,15 @@ const todoApp = createApp({
             title: "To Do List",
             todo: [
                 {
-                    text: "",
+                    text: "Fai i piatti",
                     done: false,
                 },
                 {
-                    text: "",
-                    done: false,
+                    text: "Accarezza il gatto",
+                    done: true,
                 },
                 {
-                    text: "",
+                    text: "Porta dentro la spazzatura",
                     done: false,
                 }
             ],
@@ -24,4 +24,4 @@ const todoApp = createApp({
             }
         }
     }
-}).mount()
+}).mount("#todoApp")

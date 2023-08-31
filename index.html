@@ -25,6 +25,11 @@
 </head>
 <body>
 
+    <div id="todoApp">
+        <ol>
+            <li v-for="(task, index) in todo"><s v-if="task.done == true">{{task.text}}</s> <span v-else="task.done == false">{{task.text}}</span></li>
+        </ol>
+    </div>
 
 
     <!-- bootstrap / javascript -->
