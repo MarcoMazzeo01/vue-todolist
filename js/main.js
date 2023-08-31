@@ -21,7 +21,16 @@ const todoApp = createApp({
             emptyTodo: {
                 text: "",
                 done: false
-            }
+            },
+         
         }
+    },
+
+    methods: {
+        removeTask() {
+            console.log()
+        },
+
+        add
     }
 }).mount("#todoApp")

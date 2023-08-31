@@ -26,8 +26,13 @@
 <body>
 
     <div id="todoApp">
+
         <ol>
-            <li v-for="(task, index) in todo"><s v-if="task.done == true">{{task.text}}</s> <span v-else="task.done == false">{{task.text}}</span></li>
+            <li v-for="(task, index) in todo">
+                <s v-if="task.done">{{task.text}}</s>
+                <span v-else="!task.done">{{task.text}}</span>
+                <span @click="removeTask"> X</span>
+            </li>
         </ol>
     </div>
 
