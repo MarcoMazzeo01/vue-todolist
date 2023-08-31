@@ -31,9 +31,15 @@ const todoApp = createApp({
         },
 
         newTask() {
-            const newTodo = {...this.emptyTodo}
-            this.todo.push(newTodo)
-            this.emptyTodo.text = ''
+
+            if (!this.emptyTodo.text == '') {
+                const newTodo = {...this.emptyTodo}
+                this.todo.push(newTodo)
+                this.emptyTodo.text = ''
+            } else {
+                console.log("Non puoi aggiungere una task vuota.")
+            }
+           
         }
     }
 }).mount("#todoApp")
