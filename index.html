@@ -29,7 +29,7 @@
 
         <!-- ADD NEW TASK -->
         <div>
-            <input type="text" v-model="emptyTodo.text" placeholder="Inserisci nuova azione...">
+            <input type="text" v-model="emptyTodo.text" @keyup.enter="newTask" placeholder="Inserisci nuova azione...">
             <button @click="newTask">Aggiungi</button>
         </div>
 
