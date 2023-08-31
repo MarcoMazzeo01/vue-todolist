@@ -22,15 +22,18 @@ const todoApp = createApp({
                 text: "",
                 done: false
             },
-         
         }
     },
 
     methods: {
-        removeTask() {
-            console.log()
+        removeTask(index) {
+             this.todo.splice(index, 1)
         },
 
-        add
+        newTask() {
+            const newTodo = {...this.emptyTodo}
+            this.todo.push(newTodo)
+            this.emptyTodo.text = ''
+        }
     }
 }).mount("#todoApp")
