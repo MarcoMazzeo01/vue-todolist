@@ -35,7 +35,7 @@
 
         <!-- TO DO LIST -->
         <ol>
-            <li v-for="(task, index) in todo">
+            <li v-for="(task, index) in todo" @click="task.done = !task.done">
                 <s v-if="task.done">{{task.text}}</s>
                 <span v-else="!task.done">{{task.text}}</span>
                 <span @click="removeTask(index)"> X</span>
